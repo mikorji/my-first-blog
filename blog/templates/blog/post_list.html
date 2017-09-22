@@ -8,7 +8,8 @@
             <h1>¿Dón-D Stá...?</h1>
             <h2>Que no lo encuentro</h2>
         </div>
-        <div>
+
+  <!--      <div>
             <ul>
                 <li>
                     <h2>
@@ -23,9 +24,27 @@
                         <storng> - La magia de encontrar las cosas</storng>
                     </h2>
                     <em>published: 14.06.2014, 12:14</em>
-
                 </li>
             </ul>
+        </div>-->
+<!--
+        <div>
+            {{ posts }}
+        </div>
+        <div>
+            {% for post in posts %}
+            {{ post }}
+            {% endfor %}
+        </div>
+-->
+        <div>
+            {% for post in posts %}
+                <div>
+                    <h1><a href="">{{ post.title }}</a></h1>
+                    <p>published: {{ post.published_date }}</p>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
         </div>
 
     </body>
